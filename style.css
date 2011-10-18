@@ -2,10 +2,12 @@ html,
 body{
 	height:100%;
 	width:100%;
-	background-color:#000; font-family:arial,verdana,sans-serif; margin:0; padding:0;
+	background-color:#000; 
+	font-family:arial,verdana,sans-serif;
 	color:#eee;
 	margin:0;
 	padding:0;
+	position:relative;
 }
 
 /*head{display:block;}*/
@@ -40,9 +42,9 @@ body{overflow:hidden;}
 /*  background-color:#101016;*/
   border-radius:4px;
   float:left;
-  transition: background-color 1.5s;
-  -moz-transition: background-color 1.5s; /* Firefox 4 */
-  -webkit-transition: background-color 1.5s; /* Safari and Chrome */
+  transition: all 1.5s;
+  -moz-transition: all 1.5s; /* Firefox 4 */
+  -webkit-transition: all 1.5s; /* Safari and Chrome */
 }
 
 .off{
@@ -54,22 +56,59 @@ body{overflow:hidden;}
 /*  background-color:#0D95F9;*/
 }
 
+#wall.round .light{
+  border-width:5px;
+  border-radius:100px;
+}
 
-#pct {
+#wall.rings .light{
+  border-width:3px;
+  margin:0 -12px -12px 0;
+  border-radius:100px;
+  background-color: transparent;
+  height:50px;
+  width:50px;
+}
+
+#wall.rings .off {
+    background-color: transparent;
+    border-color:#333355;
+}
+
+#wall.rings .on {
+    background-color: transparent;
+    border-color: #CC77FF;
+    z-index: 1;
+}
+
+#pct,
+#dimmer {
+  display:block;
   position:absolute;
+  z-index:1;
   top:20px;
   left:20px;
+  margin:0;
   font-size:200px;
   font-family:helvetica;
   width:1.7em;
   padding-right:0.1em;
-  background-color:pink;
+  background-color:#000;
   color:#fff;
   text-shadow:0 0 8px #101016;
+  -moz-text-shadow:0 0 8px #101016;
+  -webkit-text-shadow:0 0 8px #101016;
   text-align:right;
+  opacity:0.7;
   transition: opacity 1.5s;
   -moz-transition: opacity 1.5s; /* Firefox 4 */
   -webkit-transition: opacity 1.5s; /* Safari and Chrome */
+  border-radius:8px;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  box-shadow:0 0 25px 1px rgba(255,255,255,0.4);
+  -moz-box-shadow:0 0 25px 1px rgba(255,255,255,0.4);
+  -webkit-box-shadow:0 0 25px 1px rgba(255,255,255,0.4);
 }
 
 
